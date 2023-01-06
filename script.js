@@ -1,3 +1,10 @@
+function getNewBookInfo(){
+    let book_name = document.querySelector("#book-name");
+    console.log(book_name);
+}
+
+getNewBookInfo();
+
 // var mylibrary = [];
 
 // // constructor 
@@ -30,4 +37,3 @@
 // console.log(mylibrary)
 
 
-console.log("Working");
