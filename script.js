@@ -13,7 +13,7 @@ function Book (title, author, pages, read){
     this.info = ()=>{
 
         return `${this.title},${this.author}, ${this.pages}, ${this.read}`
-        
+
     }
 }
 
@@ -21,9 +21,10 @@ function Book (title, author, pages, read){
 function getNewBookInfo(){
 
     let book_name = document.querySelector("#book-name");
+    let pages = document.querySelector("#pages");
     let author = document.querySelector("#author");
     let status = document.querySelector("#status");
-    let book_info = {name:book_name.value , author:author.value , status:status.value}
+    let book_info = {name:book_name.value , pages:pages.value, author:author.value , status:status.value}
 
     return book_info
 
@@ -33,7 +34,7 @@ function getNewBookInfo(){
 function addBookToLibrary() {
     // do stuff here
     let new_book = getNewBookInfo();
-    let book = new Book(new_book.name, new_book.author,55, new_book.status)
+    let book = new Book(new_book.name, new_book.author,new_book.pages, new_book.status)
     console.log(book);
 }
 
