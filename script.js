@@ -32,11 +32,18 @@ function getNewBookInfo(){
 
 // add new book to mylibrary array or database 
 function addBookToLibrary() {
-    // do stuff here
-    let new_book = getNewBookInfo();
-    let book = new Book(new_book.name, new_book.author,new_book.pages, new_book.status)
-    console.log(book);
+
+    // information needed to create new book 
+    let new_book_info = getNewBookInfo();
+
+    // create new book 
+    let new_book = {}
+    new_book[new_book_info.name] =  new Book(new_book_info.name, new_book_info.author, new_book_info.pages, new_book_info.status);
+
+    mylibrary.push(new_book);
+    console.log(mylibrary)
 }
+
 
 add_new_btn.addEventListener("click",(e)=>{
     console.log("Working")
