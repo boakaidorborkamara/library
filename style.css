@@ -1,3 +1,79 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+    
 body{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+header{
+    margin-bottom: 30px;
+    margin-top:50px;
+}
+
+/* table styling  */
+table{
+    width: 100%;
+}
+
+table,th,td{
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+th,td{
+    padding: 10px;
+}
+
+/* th{
+    background: black;
+    color: white;
+} */
+
+table button{
     background-color: red;
+    color: white;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    outline: none;
+}
+
+table button:hover{
+    cursor: pointer;
+}
+
+
+/* form styling  */
+#form-area{
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: rgb(220, 220, 220);
+    padding: 15px;
+    margin-bottom: 50px;
+}
+
+#container{
+    width: 65%;
+    margin: 0 auto;
+}
+
+input{
+    padding: 10px;
+}
+
+select{
+    padding: 10px;
+}
+
+input[type="submit"]{
+    background-color: rgb(6, 172, 238);
+    color: white;
+    border: 0px;
+    outline: none;
+}
+
+input[type="submit"]:hover{
+    cursor: pointer;
 }

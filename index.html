@@ -8,47 +8,54 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <header>
-        <div>
-            <h1>Book Library</h1>
-        </div>
-        <div>
-            A project The Odin Project in which I have to make a library using Object Constructors. <br>
-            You can also view the Github repository of this project.
-        </div>
-    </header>
-    <main>
-        <section id="form-area">
-            <form action="">
-                <!-- book field  -->
-                <label for="book">Book</label>
-                <input type="text">
-                <!-- author  -->
-                <label for="author">Author</label>
-                <input type="text">
-                <!-- status  -->
-                <label for="status">Status</label>
-                <input type="text">
-            </form>
-        </section>
-        <section id="table-area">
-            <table>
-                <thead>
-                    <th>Name</th>
-                    <th>Author</th>
-                    <th>Status</th>
-                    <th>Action</th>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>S.Name</td>
-                        <td>S.Author</td>
-                        <td><button>Read</button></td>
-                        <td><button>Delete</button></td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
-    </main>
+    <div id="container">
+        <header>
+            <div>
+                <h1>Book Library</h1>
+            </div>
+            <div>
+                This project was build after learning about JavaScript objects, which talked about concepts like constructor, this, prototype, etc. <br>
+                You can also view the Github repository of this project <a href="https://github.com/boakaidorborkamara/library">here</a>.
+            </div>
+        </header>
+        <main>
+            <section id="form-area">
+                <form action="">
+                    <!-- book field  -->
+                    <label for="book">Book</label>
+                    <input type="text">
+                    <!-- author  -->
+                    <label for="author">Author</label>
+                    <input type="text">
+                    <!-- status  -->
+                    <label for="status">Status</label>
+                    <select name="" id="">
+                        <option value="Not Read">Not Read</option>
+                        <option value="Read">Read</option>
+                    </select>
+                    <input type="submit" value="Add New Book">
+                </form>
+            </section>
+            <section id="table-area">
+                <table>
+                    <thead>
+                        <th>Name</th>
+                        <th>Author</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>S.Name</td>
+                            <td>S.Author</td>
+                            <td><button>Read</button></td>
+                            <td><button>Delete</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </main>
+        <footer>Developed by: <a href="https://github.com/boakaidorborkamara">Dorbor</a></footer>
+    </div>
 </body>
 </html>
