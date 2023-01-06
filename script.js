@@ -1,39 +1,46 @@
-function getNewBookInfo(){
-    let book_name = document.querySelector("#book-name");
-    console.log(book_name);
+let add_new_btn = document.getElementById("new-book-btn");
+console.log(add_new_btn);
+
+// library db 
+let mylibrary = [];
+
+// book constructor 
+function Book (title, author, pages, read){
+    this.title = title;
+    this.author = author;
+    this.pages = pages;
+    this.read = read;
+    this.info = ()=>{
+
+        return `${this.title},${this.author}, ${this.pages}, ${this.read}`
+        
+    }
 }
 
-getNewBookInfo();
+// Get info for new book 
+function getNewBookInfo(){
 
-// var mylibrary = [];
+    let book_name = document.querySelector("#book-name");
+    let author = document.querySelector("#author");
+    let status = document.querySelector("#status");
+    let book_info = {name:book_name.value , author:author.value , status:status.value}
 
-// // constructor 
-// function Book (title, author, pages, read){
-//     this.title = title;
-//     this.author = author;
-//     this.pages = pages;
-//     this.read = false;
-//     this.info = ()=>{
+    return book_info
 
-//         if(this.read == false){
-//             this.read = "Not read yet";
-//         }
-//         else{
-//             this.read = "Has been read"
-//         }
+}
 
-//         return `${this.title},${this.author}, ${this.pages}, ${this.read}`
-//     }
-// }
+// add new book to mylibrary array or database 
+function addBookToLibrary() {
+    // do stuff here
+    let new_book = getNewBookInfo();
+    let book = new Book(new_book.name, new_book.author,55, new_book.status)
+    console.log(book);
+}
 
-// function addBookToLibrary(title, author, pages, read) {
-//     // do stuff here
-//     title = new Book(title, author, pages, read);
-//     mylibrary.push(title);
-// }
-
-// addBookToLibrary("Winter in Africa", "Boakia", 8, true);
-
-// console.log(mylibrary)
+add_new_btn.addEventListener("click",(e)=>{
+    console.log("Working")
+    e.preventDefault();
+    addBookToLibrary();
+})
 
 
