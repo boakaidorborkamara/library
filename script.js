@@ -71,6 +71,7 @@ function displayBook(){
         `;   
     });
 
+    
     table_body.insertAdjacentHTML("beforeend", html);
 
     return 0;
