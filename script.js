@@ -30,20 +30,34 @@ function getNewBookInfo(){
 
 }
 
-// add new book to mylibrary array or database 
+// create and add new book to mylibrary array or database 
 function addBookToLibrary() {
 
     // information needed to create new book 
     let new_book_info = getNewBookInfo();
 
     // create new book 
-    let new_book = {}
+    let new_book = {};
     new_book[new_book_info.name] =  new Book(new_book_info.name, new_book_info.author, new_book_info.pages, new_book_info.status);
 
+    // add to array db 
     mylibrary.push(new_book);
-    console.log(mylibrary)
+
+    //display books from db
+    displayBook();
+
+    return 0;
+
 }
 
+//display books on the html page
+function displayBook(){
+    //get table element
+    console.log("Displaying books fnx")
+    mylibrary.forEach((ele)=>{
+        console.log(ele);
+    })
+}
 
 add_new_btn.addEventListener("click",(e)=>{
     console.log("Working")
