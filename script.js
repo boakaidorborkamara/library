@@ -37,8 +37,7 @@ function addBookToLibrary() {
     let new_book_info = getNewBookInfo();
 
     // create new book 
-    let new_book = {};
-    new_book[new_book_info.name] =  new Book(new_book_info.name, new_book_info.author, new_book_info.pages, new_book_info.status);
+    let new_book =  new Book(new_book_info.name, new_book_info.author, new_book_info.pages, new_book_info.status);
 
     // add to array db 
     mylibrary.push(new_book);
@@ -53,11 +52,31 @@ function addBookToLibrary() {
 //display books on the html page
 function displayBook(){
     //get table element
-    console.log("Displaying books fnx")
+    console.log("Displaying books fnx");
+
+    let table_body = document.getElementById("table-body");
+    console.log(table_body);
+
+    let html;
+
     mylibrary.forEach((ele)=>{
         console.log(ele);
-    })
+        html = `
+            <tr>
+                <td>${ele.title}</td>
+                <td>${ele.author}</td>
+                <td><button>${ele.read}</button></td>
+                <td><button>Delete</button></td>
+            </tr>
+        `;   
+    });
+
+    table_body.insertAdjacentHTML("beforeend", html);
+
+    return 0;
 }
+
+// displayBook();
 
 add_new_btn.addEventListener("click",(e)=>{
     console.log("Working")
