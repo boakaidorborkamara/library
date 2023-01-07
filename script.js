@@ -55,20 +55,23 @@ function displayBook(){
     console.log("Displaying books fnx");
 
     let table_body = document.getElementById("table-body");
-    console.log(table_body);
 
     let html;
 
-    mylibrary.forEach((ele)=>{
-        console.log(ele);
+    // loop through database array and create new html element 
+    mylibrary.forEach((ele, index)=>{
+
+        console.log(index);
+
         html = `
             <tr>
                 <td>${ele.title}</td>
                 <td>${ele.author}</td>
-                <td><button>${ele.read}</button></td>
-                <td><button>Delete</button></td>
+                <td><button id=${index}>${ele.read}</button></td>
+                <td><button id=${index}>Delete</button></td>
             </tr>
         `;   
+
     });
 
     
@@ -77,7 +80,11 @@ function displayBook(){
     return 0;
 }
 
-// displayBook();
+//delete an existing book
+function deleteBook(){
+
+}
+
 
 add_new_btn.addEventListener("click",(e)=>{
     console.log("Working")
