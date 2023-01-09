@@ -3,6 +3,7 @@ console.log(add_new_btn);
 
 // library db 
 let mylibrary = [];
+console.log("Array initially empty", mylibrary);
 
 // book constructor 
 function Book (title, author, pages, read){
@@ -41,11 +42,9 @@ function addBookToDatabaseArray() {
 
     // add to new book to db array 
     mylibrary.push(new_book);
+    console.log(mylibrary);
 
-    //display books from db
-    displayBookFromDatabase();
-
-    deleteBook();
+  
 
     return 0;
 
@@ -98,7 +97,7 @@ function deleteBook(){
 
             //remove the book that is being targeted from myLibrary array / db
             console.log("deleting from db")
-            mylibrary.splice(book_index,1);
+            let deleted_book = mylibrary.splice(book_index,1);
             console.log("done deleting")
             console.log(mylibrary);
 
@@ -109,16 +108,19 @@ function deleteBook(){
             // console.log(mylibrary.length);
 
             //update the dom with changes made in the db
-            // displayBook();
+            // displayBookFromDatabase();
         })
     })
 }
 
 
 add_new_btn.addEventListener("click",(e)=>{
-    console.log("Working")
     e.preventDefault();
-    addBookToDatabaseArray
+
+    addBookToDatabaseArray();
+    displayBookFromDatabase();
+    
+    deleteBook();
 })
 
 
